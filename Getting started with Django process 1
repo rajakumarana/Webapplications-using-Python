@@ -1,0 +1,60 @@
+Process 1: Setting up the project:
+
+1.Creating Virtual Environment commands:  learning_logs$ python -m venv ll_env
+
+2.Activtivating the Virtual Environment:  
+      learning_logs$ source ll_env/bin/activate
+      (ll_env)learning_logs$ 
+      
+3.De-activtivating the Virtual Environment:  
+      (ll_env)learning_logs$ deactivate
+      learning_logs$
+      
+4.Installing Django: Once Venv activated, enter following to install Django:
+      (ll_env)learning_logs$ pip install django
+      collecting Django
+      --snip--
+      Installing collected packages: pytz, Django
+      Successfully Installed django-2.2.0 pytz-2018.9 sqlparse-0.2.4
+      (ll_env)learning_logs$ 
+    
+ 5.Creating a project in Django
+    (ll_env)learning_logs$ django-admin startproject learning_log .   /**Set up a new project & "." at the end creates directory structure**/
+    (ll_env)learning_logs$ ls                                        
+     learning_log     ll_env    manage.py                                
+    (ll_env)learning_logs$ ls learning_log
+    __init__.py    settings.py    urls.py    wsgi.py
+    
+     /**manage.py - Short pgm commands that feeds them to relvant part of Django to run, use the command to manage tasks(Working with DB and running servers) **/       
+     /**seetings.py - controls how Django interacts with your system & manages ur project **/
+     /**urls.py - Tells Django which pages to build in response to browser requests **/
+     /**wsgi.py(Web server gataway interface) - Django to serve the files it creates **/
+     
+     6. Creating the database
+     (ll_env)learning_logs$ python manage.py migrate
+      operations to perform:
+        Apply all migrations: admin,auth,...
+      Running migrations:
+        Apllying sessions.0001_initial..OK
+      (ll_env)learning_logs$ ls
+      db.sqlite3   learning_log     ll_env    manage.py                                
+      
+      7.Viewing the project: runserver to ensure project properly setup.
+      (ll_env)learning_logs$ python manage.py runserver
+       ctrl-c
+       (ll_env)learning_logs$ python manage.py runserver 8001
+      
+     
+     
+      
+      
+     
+     
+     
+
+      
+
+    
+
+
+
